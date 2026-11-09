@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>97Car — Cartes graphiques</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .gpu-hero{padding-top:70px; text-align:center;}
+  .gpu-card{
+    max-width:520px; margin:40px auto 0; background:var(--panel); border:1px solid var(--line);
+    border-radius:18px; padding:30px; position:relative; overflow:hidden;
+  }
+  .gpu-body{
+    background:linear-gradient(160deg, #241a44, #180f30); border-radius:12px; padding:24px;
+    display:flex; align-items:center; justify-content:center; gap:20px; position:relative;
+  }
+  .fan{
+    width:80px; height:80px; border-radius:50%; border:3px solid var(--violet);
+    position:relative; animation:spin 3s linear infinite;
+  }
+  .fan::before, .fan::after{
+    content:''; position:absolute; width:3px; height:34px; background:var(--violet);
+    top:6px; left:50%; transform-origin:bottom center;
+  }
+  .fan::before{transform:translateX(-50%) rotate(60deg);}
+  .fan::after{transform:translateX(-50%) rotate(-60deg);}
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .meter{margin-top:24px;}
+  .meter-row{display:flex; align-items:center; gap:12px; margin-bottom:10px;}
+  .meter-label{font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--muted); width:90px;}
+  .meter-track{flex:1; height:8px; background:var(--panel-2); border-radius:4px; overflow:hidden;}
+  .meter-fill{height:100%; background:var(--grad);}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand"><div class="avatar">97</div>97<span class="accent">Car</span></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="ram.html">RAM</a>
+    <a href="gpu.html" class="active">Carte graphique</a>
+    <a href="cpu.html">Processeur</a>
+    <a href="alimentation.html">Alimentation</a>
+    <a href="souris.html">Souris</a>
+    <a href="clavier.html">Clavier</a>
+  </nav>
+  <a href="#produits" class="nav-cta">Voir les modèles</a>
+</header>
+
+<section class="gpu-hero">
+  <div class="eyebrow" style="justify-content:center;">Catégorie · 02</div>
+  <h1 style="font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(2rem,4vw,3rem);">
+    Carte <span style="background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;">graphique</span>
+  </h1>
+  <p style="color:var(--muted); max-width:480px; margin:16px auto 0; line-height:1.6;">
+    Du gaming 1080p à la 4K, en passant par la création 3D — des GPU testés en charge avant expédition.
+  </p>
+
+  <div class="gpu-card">
+    <!-- Illustration 1 : ventirad -->
+    <div class="gpu-body">
+      <div class="fan"></div>
+      <div class="fan"></div>
+    </div>
+    <!-- Illustration 2 : jauge de consommation -->
+    <div class="meter">
+      <div class="meter-row"><span class="meter-label">TEMP °C</span><div class="meter-track"><div class="meter-fill" style="width:55%;"></div></div></div>
+      <div class="meter-row"><span class="meter-label">POWER W</span><div class="meter-track"><div class="meter-fill" style="width:78%;"></div></div></div>
+      <div class="meter-row"><span class="meter-label">FAN RPM</span><div class="meter-track"><div class="meter-fill" style="width:40%;"></div></div></div>
+    </div>
+    <div class="mono" style="text-align:center; color:var(--dim); font-size:0.7rem; margin-top:16px;">TESTÉE 30 MIN EN CHARGE AVANT EXPÉDITION</div>
+  </div>
+</section>
+
+<section id="produits">
+  <div class="section-head">
+    <div class="eyebrow">Modèles</div>
+    <h2>Nos cartes graphiques</h2>
+  </div>
+  <div class="grid3">
+    <div class="product-card">
+      <div class="thumb tier-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="17" height="10" rx="1.5"/><circle cx="7" cy="12" r="2"/><path d="M19 10h3M19 14h3"/></svg><span class="tag">8 Go</span></div>
+      <div class="pname">Milieu de gamme</div>
+      <div class="pspec">1080p / 1440p</div>
+      <div class="prow"><span class="price">289 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="17" height="10" rx="1.5"/><circle cx="7" cy="12" r="2"/><path d="M19 10h3M19 14h3"/></svg><span class="tag">12 Go</span></div>
+      <div class="pname">Performance</div>
+      <div class="pspec">1440p, ray-tracing</div>
+      <div class="prow"><span class="price">549 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="17" height="10" rx="1.5"/><circle cx="7" cy="12" r="2"/><path d="M19 10h3M19 14h3"/></svg><span class="tag">24 Go</span></div>
+      <div class="pname">Enthousiaste</div>
+      <div class="pspec">4K, création 3D</div>
+      <div class="prow"><span class="price">1 799 €</span><span class="buy">Voir</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head">
+    <div class="eyebrow">Avis clients — Cartes graphiques</div>
+    <h2>Ils ont acheté un GPU</h2>
+  </div>
+  <div class="grid3">
+    <div class="mini-review">
+
+      <div class="top">
+
+        <span class="who"></span>
+
+        <span class="stars"></span>
+
+      </div>
+
+      <p></p>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mono">97CAR — SAINT-BENOÎT, LA RÉUNION (974)</div>
+  <div class="foot-links">
+    <a href="index.html">Accueil</a><a href="ram.html">RAM</a><a href="cpu.html">Processeur</a>
+    <a href="alimentation.html">Alimentation</a><a href="souris.html">Souris</a><a href="clavier.html">Clavier</a>
+  </div>
+</footer>
+</body>
+</html>

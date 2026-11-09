@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>97Car — Claviers</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .kb-hero{padding-top:70px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+  .kb-panel{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:26px;}
+  .keys-row{display:flex; gap:5px; margin-bottom:5px; justify-content:center;}
+  .key{width:26px; height:26px; border-radius:4px; background:var(--panel-2); border:1px solid var(--line);}
+  .key.lit{background:var(--grad); box-shadow:0 0 8px rgba(168,85,247,0.5);}
+  .typing{
+    margin-top:22px; font-family:'JetBrains Mono',monospace; font-size:0.95rem; color:var(--violet);
+    min-height:24px; text-align:center;
+  }
+  .typing::after{content:'▍'; animation:blink 1s step-start infinite;}
+  @keyframes blink{ 50%{opacity:0;} }
+  .keycap-profile{display:flex; align-items:flex-end; gap:6px; justify-content:center; margin-top:20px;}
+  .cap{width:22px; background:var(--panel-2); border:1px solid var(--line); border-radius:3px 3px 0 0;}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .spec-list{margin-top:20px; display:flex; flex-direction:column; gap:8px;}
+  .spec-row{display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--muted); border-bottom:1px dashed var(--line); padding-bottom:6px;}
+  .spec-row b{color:var(--text); font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand"><div class="avatar">97</div>97<span class="accent">Car</span></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="ram.html">RAM</a>
+    <a href="gpu.html">Carte graphique</a>
+    <a href="cpu.html">Processeur</a>
+    <a href="alimentation.html">Alimentation</a>
+    <a href="souris.html">Souris</a>
+    <a href="clavier.html" class="active">Clavier</a>
+  </nav>
+  <a href="#produits" class="nav-cta">Voir les modèles</a>
+</header>
+
+<section class="kb-hero">
+  <div>
+    <div class="eyebrow">Catégorie · 06</div>
+    <h1 style="font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(2rem,4vw,3rem); line-height:1.05;">
+      Le <span style="background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;">Clavier</span>
+    </h1>
+    <p style="color:var(--muted); margin-top:18px; max-width:440px; line-height:1.6;">
+      Mécanique ou membrane, AZERTY, rétroéclairés ou non — pour écrire, coder ou jouer.
+    </p>
+    <div class="spec-list">
+      <div class="spec-row"><span>Types</span><b>Mécanique / Membrane</b></div>
+      <div class="spec-row"><span>Disposition</span><b>AZERTY</b></div>
+      <div class="spec-row"><span>Rétroéclairage</span><b>RGB en option</b></div>
+      <div class="spec-row"><span>Garantie</span><b>12 mois</b></div>
+    </div>
+  </div>
+
+  <div class="kb-panel">
+    <!-- Illustration 1 : rangées de touches -->
+    <div id="keyRows"></div>
+    <div class="typing" id="typingText"></div>
+    <!-- Illustration 2 : profil des keycaps -->
+    <div class="keycap-profile">
+      <div class="cap" style="height:14px;"></div>
+      <div class="cap" style="height:20px;"></div>
+      <div class="cap" style="height:26px;"></div>
+      <div class="cap" style="height:20px;"></div>
+      <div class="cap" style="height:14px;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="produits">
+  <div class="section-head">
+    <div class="eyebrow">Modèles</div>
+    <h2>Nos claviers</h2>
+  </div>
+  <div class="grid3">
+    <div class="product-card">
+      <div class="thumb tier-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="12" rx="1.5"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg><span class="tag">Membrane</span></div>
+      <div class="pname">AZERTY bureautique</div>
+      <div class="pspec">Silencieux, filaire</div>
+      <div class="prow"><span class="price">16 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="12" rx="1.5"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg><span class="tag">Mécanique</span></div>
+      <div class="pname">RGB rétroéclairé</div>
+      <div class="pspec">Switches réactifs</div>
+      <div class="prow"><span class="price">54 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="12" rx="1.5"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg><span class="tag">75% sans fil</span></div>
+      <div class="pname">Mécanique compact</div>
+      <div class="pspec">Bluetooth + 2.4G</div>
+      <div class="prow"><span class="price">89 €</span><span class="buy">Voir</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head">
+    <div class="eyebrow">Avis clients — Claviers</div>
+    <h2>Ils ont testé nos claviers</h2>
+  </div>
+  <div class="grid3">
+    <div class="mini-review">
+
+      <div class="top">
+
+        <span class="who"></span>
+
+        <span class="stars"></span>
+
+      </div>
+
+      <p></p>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mono">97CAR — SAINT-BENOÎT, LA RÉUNION (974)</div>
+  <div class="foot-links">
+    <a href="index.html">Accueil</a><a href="ram.html">RAM</a><a href="gpu.html">Carte graphique</a>
+    <a href="cpu.html">Processeur</a><a href="alimentation.html">Alimentation</a><a href="souris.html">Souris</a>
+  </div>
+</footer>
+
+<script>
+  const keyRows = document.getElementById('keyRows');
+  const rowLengths = [10, 9, 8];
+  rowLengths.forEach(len=>{
+    const row = document.createElement('div');
+    row.className = 'keys-row';
+    for(let i=0;i<len;i++){
+      const k = document.createElement('div');
+      k.className = 'key';
+      row.appendChild(k);
+    }
+    keyRows.appendChild(row);
+  });
+
+  const allKeys = keyRows.querySelectorAll('.key');
+  const message = "97CAR();";
+  let i = 0;
+  const typingEl = document.getElementById('typingText');
+  function typeLoop(){
+    typingEl.textContent = message.slice(0, i % (message.length+1));
+    allKeys.forEach(k=>k.classList.remove('lit'));
+    if(allKeys.length){
+      const randKey = allKeys[Math.floor(Math.random()*allKeys.length)];
+      randKey.classList.add('lit');
+    }
+    i++;
+    setTimeout(typeLoop, 260);
+  }
+  typeLoop();
+</script>
+</body>
+</html>

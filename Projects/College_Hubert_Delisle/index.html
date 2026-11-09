@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Technique — Collège Hubert Delisle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="dot"></span> Pôle Numérique — Collège Hubert Delisle</div>
+    <nav class="nav-links">
+      <a href="#maintenance">Maintenance</a>
+      <a href="#prisme">Projet Prisme</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">◆ Stage / mission informatique</div>
+      <h1>Maintenance du parc informatique &amp; conception du système <span>Prisme</span></h1>
+      <p class="lead">Au sein du Collège Hubert Delisle, j'ai assuré la maintenance des postes et équipements numériques, et développé <strong>Prisme</strong>, un système de contrôle des entrées et sorties des élèves par QR code.</p>
+      <div class="hero-actions">
+        <a href="#prisme" class="btn btn-primary">Voir le projet Prisme →</a>
+        <a href="#maintenance" class="btn btn-ghost">Voir la maintenance</a>
+      </div>
+    </div>
+
+    <div class="gate">
+      <div class="gate-label"><span>PRISME // POINT DE CONTRÔLE</span><span class="gate-status">● ACTIF</span></div>
+      <div class="qr-scene">
+        <div class="scan-line"></div>
+        <div class="qr" id="qrGrid"></div>
+      </div>
+      <div class="gate-foot">
+        <span><span class="pulse"></span>Badge scanné</span>
+        <span>Élève identifié · Accès enregistré</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="maintenance">
+  <div class="section-head">
+    <div class="section-tag">01 · MAINTENANCE INFORMATIQUE</div>
+    <h2>Garder le parc numérique opérationnel</h2>
+    <p>Interventions régulières sur les postes, réseaux et équipements de l'établissement pour assurer la continuité du service aux élèves et aux équipes pédagogiques.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">🖥️</div>
+      <h3>Diagnostic &amp; réparation</h3>
+      <p>Identification des pannes matérielles et logicielles sur les postes des salles informatiques et de l'administration.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔧</div>
+      <h3>Maintenance préventive</h3>
+      <p>Mises à jour, nettoyage système, vérifications régulières pour limiter les interruptions de service.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>Réseau &amp; connectivité</h3>
+      <p>Suivi des équipements réseau (switchs, bornes Wi-Fi) pour garantir un accès stable à l'ensemble de l'établissement.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🖨️</div>
+      <h3>Périphériques</h3>
+      <p>Installation et dépannage des imprimantes, vidéoprojecteurs et autres équipements de classe.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎧</div>
+      <h3>Support utilisateurs</h3>
+      <p>Assistance auprès des enseignants et du personnel administratif pour résoudre les problèmes du quotidien.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📋</div>
+      <h3>Suivi du parc</h3>
+      <p>Tenue à jour de l'inventaire du matériel informatique de l'établissement.</p>
+    </div>
+  </div>
+</section>
+
+<section id="prisme">
+  <div class="section-head">
+    <div class="section-tag">02 · PROJET PRISME</div>
+    <h2>Un système de contrôle des entrées et sorties par QR code</h2>
+    <p>Prisme permet de scanner l'entrée et la sortie de chaque élève grâce à un QR code personnel, donnant à l'établissement une vision en temps réel des présences.</p>
+  </div>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-num">ÉTAPE 01</div>
+      <h3>QR code élève</h3>
+      <p>Chaque élève dispose d'un QR code unique associé à son profil dans le système.</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">ÉTAPE 02</div>
+      <h3>Scan au portail</h3>
+      <p>Le QR code est scanné à l'entrée et à la sortie de l'établissement pour enregistrer le passage.</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">ÉTAPE 03</div>
+      <h3>Suivi en direct</h3>
+      <p>L'établissement visualise en temps réel qui est présent, absent, entré ou sorti.</p>
+    </div>
+  </div>
+
+  <div class="feature-list">
+    <div class="feature">
+      <span class="tick">›</span>
+      <div><strong>Traçabilité des passages</strong><span>Horodatage précis de chaque entrée et sortie d'élève.</span></div>
+    </div>
+    <div class="feature">
+      <span class="tick">›</span>
+      <div><strong>Vue d'ensemble pour l'établissement</strong><span>Une vision centralisée des présences pour la vie scolaire.</span></div>
+    </div>
+    <div class="feature">
+      <span class="tick">›</span>
+      <div><strong>Gain de temps</strong><span>Remplace le pointage manuel par un scan rapide.</span></div>
+    </div>
+    <div class="feature">
+      <span class="tick">›</span>
+      <div><strong>Fiabilité</strong><span>Réduit les erreurs de saisie liées au suivi papier.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Portfolio réalisé dans le cadre de mon activité au Collège Hubert Delisle.</p>
+  <p class="mono">maintenance informatique · projet prisme · qr code · vie scolaire</p>
+</footer>
+
+<script>
+  // Generate a pseudo-random but stable QR-like pattern
+  const grid = document.getElementById('qrGrid');
+  const pattern = [1,0,1,1,0,1,1, 1,1,0,1,1,0,1, 0,1,1,0,1,1,0, 1,0,1,1,1,0,1, 1,1,0,0,1,1,0, 0,1,1,1,0,1,1, 1,0,0,1,1,0,1];
+  pattern.forEach(v=>{
+    const i = document.createElement('i');
+    if(v) i.classList.add('on');
+    grid.appendChild(i);
+  });
+</script>
+
+</body>
+</html>

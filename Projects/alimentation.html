@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>97Car — Alimentations</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .psu-hero{padding-top:70px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+  .psu-box{background:linear-gradient(160deg,#241a44,#180f30); border:1px solid var(--line); border-radius:14px; padding:26px;}
+  .psu-unit{
+    background:var(--panel-2); border:1px solid var(--line); border-radius:10px; height:120px;
+    display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+  }
+  .psu-unit .fan-ring{width:70px; height:70px; border-radius:50%; border:3px solid var(--violet); position:relative;}
+  .psu-unit .fan-ring::before{content:'+'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--violet); font-size:1.4rem; font-weight:700;}
+  .cables{display:flex; gap:10px; justify-content:center; margin-top:16px;}
+  .cable{width:8px; height:44px; border-radius:4px; background:var(--dim);}
+  .cable.on{background:var(--grad);}
+  .badge-row{display:flex; gap:10px; margin-top:22px; justify-content:center;}
+  .badge{border:1px solid var(--line); border-radius:20px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--muted);}
+  .badge.gold{border-color:var(--violet); color:var(--violet);}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .spec-list{margin-top:20px; display:flex; flex-direction:column; gap:8px;}
+  .spec-row{display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--muted); border-bottom:1px dashed var(--line); padding-bottom:6px;}
+  .spec-row b{color:var(--text); font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand"><div class="avatar">97</div>97<span class="accent">Car</span></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="ram.html">RAM</a>
+    <a href="gpu.html">Carte graphique</a>
+    <a href="cpu.html">Processeur</a>
+    <a href="alimentation.html" class="active">Alimentation</a>
+    <a href="souris.html">Souris</a>
+    <a href="clavier.html">Clavier</a>
+  </nav>
+  <a href="#produits" class="nav-cta">Voir les modèles</a>
+</header>
+
+<section class="psu-hero">
+  <div>
+    <div class="eyebrow">Catégorie · 04</div>
+    <h1 style="font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(2rem,4vw,3rem); line-height:1.05;">
+      L'<span style="background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;">Alimentation</span>
+    </h1>
+    <p style="color:var(--muted); margin-top:18px; max-width:440px; line-height:1.6;">
+      Des blocs certifiés 80+, modulaires ou non, pour alimenter ta config en toute stabilité.
+    </p>
+    <div class="spec-list">
+      <div class="spec-row"><span>Puissances</span><b>450W — 1000W</b></div>
+      <div class="spec-row"><span>Certification</span><b>80+ Bronze à Gold</b></div>
+      <div class="spec-row"><span>Format</span><b>ATX, modulaire</b></div>
+      <div class="spec-row"><span>Garantie</span><b>24 mois</b></div>
+    </div>
+  </div>
+
+  <div class="psu-box">
+    <!-- Illustration 1 : unité avec ventilateur -->
+    <div class="psu-unit"><div class="fan-ring"></div></div>
+    <!-- Illustration 2 : câbles modulaires -->
+    <div class="cables">
+      <div class="cable on"></div><div class="cable"></div><div class="cable on"></div>
+      <div class="cable on"></div><div class="cable"></div><div class="cable on"></div><div class="cable"></div>
+    </div>
+    <div class="badge-row">
+      <div class="badge">80+ BRONZE</div>
+      <div class="badge gold">80+ GOLD</div>
+      <div class="badge">MODULAIRE</div>
+    </div>
+  </div>
+</section>
+
+<section id="produits">
+  <div class="section-head">
+    <div class="eyebrow">Modèles</div>
+    <h2>Nos alimentations</h2>
+  </div>
+  <div class="grid3">
+    <div class="product-card">
+      <div class="thumb tier-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 12h3l-1 4 5-6h-3l1-4-5 6z"/></svg><span class="tag">550W</span></div>
+      <div class="pname">80+ Bronze</div>
+      <div class="pspec">Bureautique</div>
+      <div class="prow"><span class="price">59 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 12h3l-1 4 5-6h-3l1-4-5 6z"/></svg><span class="tag">750W</span></div>
+      <div class="pname">80+ Gold modulaire</div>
+      <div class="pspec">Gaming exigeant</div>
+      <div class="prow"><span class="price">109 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 12h3l-1 4 5-6h-3l1-4-5 6z"/></svg><span class="tag">1000W</span></div>
+      <div class="pname">80+ Gold modulaire</div>
+      <div class="pspec">Multi-GPU, stations</div>
+      <div class="prow"><span class="price">169 €</span><span class="buy">Voir</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head">
+    <div class="eyebrow">Avis clients — Alimentations</div>
+    <h2>Ils ont changé leur alim</h2>
+  </div>
+  <div class="grid3">
+    <div class="mini-review">
+
+      <div class="top">
+
+        <span class="who"></span>
+
+        <span class="stars"></span>
+
+      </div>
+
+      <p></p>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mono">97CAR — SAINT-BENOÎT, LA RÉUNION (974)</div>
+  <div class="foot-links">
+    <a href="index.html">Accueil</a><a href="ram.html">RAM</a><a href="gpu.html">Carte graphique</a>
+    <a href="cpu.html">Processeur</a><a href="souris.html">Souris</a><a href="clavier.html">Clavier</a>
+  </div>
+</footer>
+</body>
+</html>

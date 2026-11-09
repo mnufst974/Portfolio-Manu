@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>97Car — Souris</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .mouse-hero{padding-top:70px; text-align:center;}
+  .mouse-stage{
+    max-width:420px; margin:36px auto 0; background:var(--panel); border:1px solid var(--line);
+    border-radius:18px; padding:34px; position:relative;
+  }
+  .mouse-shape{
+    width:90px; height:130px; margin:0 auto; border-radius:45px 45px 50px 50px;
+    background:linear-gradient(160deg,#2a1f4d,#180f30); border:1px solid var(--line);
+    position:relative;
+  }
+  .mouse-shape::before{
+    content:''; position:absolute; top:14px; left:50%; transform:translateX(-50%);
+    width:2px; height:34px; background:var(--dim);
+  }
+  .mouse-shape .scroll{
+    position:absolute; top:16px; left:50%; transform:translateX(-50%);
+    width:8px; height:16px; border-radius:4px; background:var(--grad);
+  }
+  .dpi-dial{margin-top:26px; display:flex; align-items:center; justify-content:center; gap:16px;}
+  .dpi-track{width:220px; height:6px; background:var(--panel-2); border-radius:3px; position:relative;}
+  .dpi-fill{height:100%; width:60%; background:var(--grad); border-radius:3px;}
+  .dpi-value{font-family:'JetBrains Mono',monospace; color:var(--violet); font-size:0.85rem; width:70px;}
+  .cursor-trail{position:relative; height:60px; margin-top:20px;}
+  .dot{position:absolute; width:6px; height:6px; border-radius:50%; background:var(--pink); top:50%;}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand"><div class="avatar">97</div>97<span class="accent">Car</span></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="ram.html">RAM</a>
+    <a href="gpu.html">Carte graphique</a>
+    <a href="cpu.html">Processeur</a>
+    <a href="alimentation.html">Alimentation</a>
+    <a href="souris.html" class="active">Souris</a>
+    <a href="clavier.html">Clavier</a>
+  </nav>
+  <a href="#produits" class="nav-cta">Voir les modèles</a>
+</header>
+
+<section class="mouse-hero">
+  <div class="eyebrow" style="justify-content:center;">Catégorie · 05</div>
+  <h1 style="font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(2rem,4vw,3rem);">
+    La <span style="background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;">Souris</span>
+  </h1>
+  <p style="color:var(--muted); max-width:460px; margin:16px auto 0; line-height:1.6;">
+    Bureautique ou gaming, filaire ou sans fil — précision et confort de prise en main.
+  </p>
+
+  <div class="mouse-stage">
+    <!-- Illustration 1 : silhouette de la souris -->
+    <div class="mouse-shape"><div class="scroll"></div></div>
+
+    <!-- Illustration 2 : réglage DPI + trainée de curseur -->
+    <div class="dpi-dial">
+      <span class="mono" style="color:var(--muted); font-size:0.75rem;">DPI</span>
+      <div class="dpi-track"><div class="dpi-fill"></div></div>
+      <span class="dpi-value">12 000</span>
+    </div>
+    <div class="cursor-trail" id="trail"></div>
+    <div class="mono" style="text-align:center; color:var(--dim); font-size:0.7rem;">CAPTEUR OPTIQUE HAUTE PRÉCISION</div>
+  </div>
+</section>
+
+<section id="produits">
+  <div class="section-head">
+    <div class="eyebrow">Modèles</div>
+    <h2>Nos souris</h2>
+  </div>
+  <div class="grid3">
+    <div class="product-card">
+      <div class="thumb tier-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="5"/><path d="M12 2v7"/></svg><span class="tag">1600 DPI</span></div>
+      <div class="pname">Bureautique filaire</div>
+      <div class="pspec">Simple et fiable</div>
+      <div class="prow"><span class="price">14 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="5"/><path d="M12 2v7"/></svg><span class="tag">12000 DPI</span></div>
+      <div class="pname">Gaming sans fil RGB</div>
+      <div class="pspec">8 boutons, 60h autonomie</div>
+      <div class="prow"><span class="price">39 €</span><span class="buy">Voir</span></div>
+    </div>
+    <div class="product-card">
+      <div class="thumb tier-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="5"/><path d="M12 2v7"/></svg><span class="tag">26000 DPI</span></div>
+      <div class="pname">Pro ultra-légère</div>
+      <div class="pspec">59g, esports</div>
+      <div class="prow"><span class="price">79 €</span><span class="buy">Voir</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head">
+    <div class="eyebrow">Avis clients — Souris</div>
+    <h2>Ils ont testé nos souris</h2>
+  </div>
+  <div class="grid3">
+    <div class="mini-review">
+
+      <div class="top">
+
+        <span class="who"></span>
+
+        <span class="stars"></span>
+
+      </div>
+
+      <p></p>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mono">97CAR — SAINT-BENOÎT, LA RÉUNION (974)</div>
+  <div class="foot-links">
+    <a href="index.html">Accueil</a><a href="ram.html">RAM</a><a href="gpu.html">Carte graphique</a>
+    <a href="cpu.html">Processeur</a><a href="alimentation.html">Alimentation</a><a href="clavier.html">Clavier</a>
+  </div>
+</footer>
+
+<script>
+  const trail = document.getElementById('trail');
+  const positions = [10,60,110,160,210,260,310,360];
+  positions.forEach((x,i)=>{
+    const d = document.createElement('div');
+    d.className = 'dot';
+    d.style.left = x + 'px';
+    d.style.opacity = (i+1)/positions.length;
+    trail.appendChild(d);
+  });
+</script>
+</body>
+</html>
